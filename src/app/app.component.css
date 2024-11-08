@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, rgba(255, 225, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/ai.avif');
+  background: linear-gradient(115deg, rgba(0, 15, 61, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/ai.avif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -14,13 +14,20 @@
 /* Logo styling for increased size */
 .logo-container {
   margin-top: -8rem; /* Extra space below the logo */
-  margin-bottom: -4rem;
+  margin-bottom: 4rem;
   display: flex;
   justify-content: center;
 }
+.submit-button {
+  cursor: pointer; /* Default cursor */
+}
 
+.submit-button:disabled {
+  cursor: not-allowed; /* Disabled cursor style */
+  opacity: 0.7; /* Optional: dim the button when disabled */
+}
 .logo {
-  width: 300px; /* Larger width for the logo */
+  width: 250px; /* Larger width for the logo */
   height: auto;
 }
 
@@ -51,12 +58,14 @@ input, textarea {
 textarea {
   margin-top: 55px;
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
   overflow-y: auto;
   max-height: 24rem;
 
 }
-
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
 /* Button styling */
 button {
   width: 100%;

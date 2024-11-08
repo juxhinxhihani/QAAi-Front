@@ -2,18 +2,29 @@
 <div class="container">
   <!-- Logo placed at the top center of the container -->
   <div class="logo-container">
-    <img src="../assets/logo3.png" alt="Logo" class="logo">
+    <img src="../assets/logo1.png" alt="Logo" class="logo">
   </div>
   <!-- Form area with a white translucent background and styling -->
   <div class="form-area">
     <!-- Simple form to handle user input and responses -->
     <form>
       <!-- Text input for complaints -->
-      <input type="text" placeholder="Enter your complaint"  name="complaint">
+      <input type="text" placeholder="Enter your complaint"  [(ngModel)]="complaint" name="complaint" class="capitalize-input">
       <!-- Button to submit the form -->
-      <button type="button" (click)="handleSubmit()">Submit</button>
-      <!-- Textarea for displaying the response, disabled for editing -->
-      <textarea rows="4" disabled placeholder="Response will appear here..."></textarea>
-    </form>
+      <button type="button" (click)="handleSubmit()" [disabled]="loading" class="submit-button">
+        <span *ngIf="!loading">Submit</span>
+        <span *ngIf="loading">Loading...</span>
+      </button>
+      <!-- Textare      <!-- Textarea for displaying the response, disabled for editing -->
+      <div *ngIf="response">
+        <textarea
+          id="response"
+          name="response"
+          [value]="response?.clientResponse || ''"
+        rows="4"
+        cols="50"
+        readonly
+        ></textarea>
+      </div>    </form>
   </div>
 </div>
