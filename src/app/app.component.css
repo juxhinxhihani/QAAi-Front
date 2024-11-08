@@ -1,0 +1,70 @@
+/* Adjusted container to better fit the full screen and align elements */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 225, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/ai.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Logo styling for increased size */
+.logo-container {
+  margin-top: -8rem; /* Extra space below the logo */
+  margin-bottom: -4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 300px; /* Larger width for the logo */
+  height: auto;
+}
+
+/* Form styling with increased padding for more transparency */
+.form-area {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  min-height: 20rem;
+  height: auto;
+  box-sizing: border-box;
+  margin-top: -10px; /* Extra space below the logo */
+}
+
+/* Input and textarea styling */
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Restrict textarea resizing to vertical */
+textarea {
+  margin-top: 55px;
+  resize: vertical;
+  min-height: 100px;
+  overflow-y: auto;
+  max-height: 24rem;
+
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffd700; /* Golden yellow */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
